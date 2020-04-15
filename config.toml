@@ -1,13 +1,27 @@
 #Uncomment as needed
-baseurl = "https://distsys-library.netlify.app/"
+baseURL = "https://distsys-library.netlify.app/"
+defaultContentLanguage = "en"
 languageCode = "en-us"
 Title = "Distributed Systems Library"
 # Copyright notice. This is displayer in the footer.
 copyright = "&copy; Miles Bryant"
-theme = "potato-dark"
+# theme = "potato-dark"
+theme = "papercss-hugo-theme"
+
+[taxonomies]
+  tag = "tags"
+
+[permalinks]
+  post = "/:filename/"
+
+[imaging]
+  quality = 99
 
 [params]
-  paginate = 10
+  homeMetaContent = "A Hugo theme made with PaperCSS, the less formal CSS framework."
+  # For more date formats see https://gohugo.io/functions/format/
+  dateFormat = "Jan 2, 2006"
+
   # Social accounts. Link to these accounts are displayed in the header and
   # footer
   # twitter = "Your Twitter username"
@@ -33,42 +47,21 @@ theme = "potato-dark"
   # logo = "/path/to/logo"
   # favicon = "/path/to/favicon"
 
-[[menu.main]]
-    name = "Home"
+
+[menu]
+  [[menu.nav]]
+    name = "Blog"
     url = "/"
     weight = 1
-
-[[menu.main]]
-    name = "Posts"
-    url = "/posts"
+  [[menu.nav]]
+    name = "Tags"
+    url = "/tags/"
     weight = 2
-
-[[menu.main]]
+  [[menu.nav]]
     name = "About"
-    url = "/about"
+    url = "/about/"
     weight = 3
-
-[related]
-  # Only include matches with rank >= threshold. This is a normalized rank between 0 and 100.
-  threshold = 80
-
-  # To get stable "See also" sections we, by default, exclude newer related pages.
-  includeNewer = false
-
-  # Will lower case keywords in both queries and in the indexes.
-  toLower = false
-
-  [[related.indices]]
-  name = "keywords"
-  weight = 150
-  [[related.indices]]
-  name  = "author"
-  toLower = true
-  weight = 30
-  [[related.indices]]
-  name  = "tags"
-  weight = 100
-  [[related.indices]]
-  name  = "date"
-  weight = 10
-  pattern = "2017"
+  [[menu.nav]]
+    name = "RSS"
+    url = "/index.xml"
+    weight = 4
