@@ -39,8 +39,8 @@ theme = "potato-dark"
     weight = 1
 
 [[menu.main]]
-    name = "Articles"
-    url = "/articles"
+    name = "Posts"
+    url = "/posts"
     weight = 2
 
 [[menu.main]]
