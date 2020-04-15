@@ -34,18 +34,18 @@ theme = "potato-dark"
   # favicon = "/path/to/favicon"
 
 [[menu.main]]
-    name = "Articles"
+    name = "Home"
     url = "/"
     weight = 1
 
 [[menu.main]]
-    name = "About"
-    url = "/about"
+    name = "Articles"
+    url = "/articles"
     weight = 2
 
 [[menu.main]]
-    identifier = "theme"
-    name = "Theme"
+    name = "About"
+    url = "/about"
     weight = 3
 
 [related]
